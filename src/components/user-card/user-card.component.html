@@ -1,0 +1,47 @@
+<div class="user-card" [ngClass]="{'user-card--reverse': reverse}">
+  <div class="user-card__content">
+    <app-heading [text]="fullName"/>
+
+    <div class="user-card__text">
+      <section>
+        <app-heading level="h3" variant="h5" text="Образование"></app-heading>
+
+        <ul>
+          <li *ngFor="let edu of educations">
+            <app-typography>
+              {{edu.description}}
+            </app-typography>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <app-heading level="h3" variant="h5" text="Работа"></app-heading>
+
+        <ul>
+          <li *ngFor="let work of works">
+            <app-typography>
+              {{work.description}}
+            </app-typography>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <app-heading level="h3" variant="h5" text="Навыки"></app-heading>
+
+        <ol>
+          <li *ngFor="let skill of skills">
+            <app-typography>
+              {{skill.description}}
+            </app-typography>
+          </li>
+        </ol>
+      </section>
+    </div>
+  </div>
+
+  <div>
+    <app-avatar [photoUrl]="photoUrl" [size]="350"/>
+  </div>
+</div>
