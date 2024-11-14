@@ -21,7 +21,7 @@ export class GreetingComponent {
   greetingMessage: string | null = null;
 
   constructor(private fb: FormBuilder) {
-    console.log('Constructor: Компонент инициализирован');
+    console.log('Constructor: Создание экземпляра компонента');
 
     this.greetingForm = this.fb.group({
       username: ['', Validators.required]
@@ -37,7 +37,7 @@ export class GreetingComponent {
   }
 
   ngDoCheck(): void {
-    console.log('ngDoCheck: Компоновка проверена');
+    console.log('ngDoCheck: Входные данные изменились');
   }
 
   ngAfterContentInit(): void {
@@ -54,6 +54,14 @@ export class GreetingComponent {
 
   ngAfterViewChecked(): void {
     console.log('ngAfterViewChecked: Вид компонента проверен');
+  }
+
+  afterNextRender(): void {
+    console.log('afterNextRender: Регистрация обратного вызова при завершении рендеринга');
+  }
+
+  afterRender(): void {
+    console.log('afterRender: Регистрация обратного вызова после последующего рендеринга');
   }
 
   ngOnDestroy(): void {
