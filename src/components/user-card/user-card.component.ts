@@ -1,8 +1,8 @@
-import {Component, Input} from '@angular/core';
-import {HeadingComponent} from '../heading/heading.component';
-import {AvatarComponent} from '../avatar/avatar.component';
-import {NgClass, NgFor,} from '@angular/common';
-import {TypographyComponent} from '../typography/typography.component';
+import { Component, Input } from '@angular/core';
+import { HeadingComponent } from '../heading/heading.component';
+import { AvatarComponent } from '../avatar/avatar.component';
+import { NgClass, NgFor } from '@angular/common';
+import { TypographyComponent } from '../typography/typography.component';
 
 export type Description = {
   id: number;

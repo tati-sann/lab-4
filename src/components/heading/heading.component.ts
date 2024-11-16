@@ -1,5 +1,5 @@
-import {Component, Input} from '@angular/core';
-import {NgStyle, NgSwitch, NgSwitchCase} from '@angular/common';
+import { Component, Input } from '@angular/core';
+import { NgStyle, NgSwitch, NgSwitchCase } from '@angular/common';
 
 @Component({
   selector: 'app-heading',

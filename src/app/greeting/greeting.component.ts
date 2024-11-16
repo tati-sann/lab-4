@@ -1,7 +1,7 @@
-import {Component, SimpleChanges} from '@angular/core';
-import {ButtonComponent} from '../../components/button/button.component';
-import {FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators} from '@angular/forms';
-import {TypographyComponent} from '../../components/typography/typography.component';
+import { Component, SimpleChanges } from '@angular/core';
+import { ButtonComponent } from '../../components/button/button.component';
+import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import { TypographyComponent } from '../../components/typography/typography.component';
 
 @Component({
   selector: 'app-greeting',
@@ -26,6 +26,14 @@ export class GreetingComponent {
     this.greetingForm = this.fb.group({
       username: ['', Validators.required]
     });
+  }
+
+  displayGreeting(): void {
+    if (this.greetingForm.valid) {
+      const username = this.greetingForm.value.username;
+
+      this.greetingMessage = `Добро пожаловать, ${username}!`;
+    }
   }
 
   ngOnInit(): void {
@@ -56,23 +64,7 @@ export class GreetingComponent {
     console.log('ngAfterViewChecked: Вид компонента проверен');
   }
 
-  afterNextRender(): void {
-    console.log('afterNextRender: Регистрация обратного вызова при завершении рендеринга');
-  }
-
-  afterRender(): void {
-    console.log('afterRender: Регистрация обратного вызова после последующего рендеринга');
-  }
-
   ngOnDestroy(): void {
     console.log('ngOnDestroy: Компонент будет уничтожен');
-  }
-
-  displayGreeting(): void {
-    if (this.greetingForm.valid) {
-      const username = this.greetingForm.value.username;
-
-      this.greetingMessage = `Добро пожаловать, ${username}!`;
-    }
   }
 }

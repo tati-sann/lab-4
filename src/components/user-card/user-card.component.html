@@ -1,47 +1,49 @@
-<div class="user-card" [ngClass]="{'user-card--reverse': reverse}">
+<div
+  class="user-card"
+  [ngClass]="{'user-card--reverse': reverse}">
   <div class="user-card__content">
     <app-heading [text]="fullName"/>
 
     <div class="user-card__text">
-      <section>
-        <app-heading level="h3" variant="h5" text="Образование"></app-heading>
+      <app-typography>
+        <section>
+          <app-heading  level="h3" variant="h5" text="Образование"/>
 
-        <ul>
-          <li *ngFor="let edu of educations">
-            <app-typography>
+          <ul>
+            <li *ngFor="let edu of educations">
               {{edu.description}}
-            </app-typography>
-          </li>
-        </ul>
-      </section>
+            </li>
+          </ul>
+        </section>
 
-      <section>
-        <app-heading level="h3" variant="h5" text="Работа"></app-heading>
+        <section>
+          <app-heading  level="h3" variant="h5" text="Работа"/>
 
-        <ul>
-          <li *ngFor="let work of works">
-            <app-typography>
+          <ul>
+            <li *ngFor="let work of works">
               {{work.description}}
-            </app-typography>
-          </li>
-        </ul>
-      </section>
+            </li>
+          </ul>
+        </section>
 
-      <section>
-        <app-heading level="h3" variant="h5" text="Навыки"></app-heading>
+        <section>
+          <app-heading  level="h3" variant="h5" text="Навыки"/>
 
-        <ol>
-          <li *ngFor="let skill of skills">
-            <app-typography>
+          <ol>
+            <li *ngFor="let skill of skills">
               {{skill.description}}
-            </app-typography>
-          </li>
-        </ol>
-      </section>
+            </li>
+          </ol>
+        </section>
+      </app-typography>
+
     </div>
   </div>
 
   <div>
-    <app-avatar [photoUrl]="photoUrl" [size]="350"/>
+    <app-avatar
+      [photoUrl]="photoUrl"
+      [size]="250"
+    />
   </div>
 </div>

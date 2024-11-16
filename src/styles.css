@@ -6,10 +6,6 @@ html, body  {
   background-color: #080808;
 }
 
-body {
-  position: relative;
-}
-
 * {
   box-sizing: border-box;
 }

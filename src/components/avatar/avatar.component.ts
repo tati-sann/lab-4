@@ -1,5 +1,5 @@
-import {Component, Input} from '@angular/core';
-import {NgOptimizedImage} from '@angular/common';
+import { Component, Input } from '@angular/core';
+import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'app-avatar',
@@ -8,7 +8,7 @@ import {NgOptimizedImage} from '@angular/common';
     NgOptimizedImage
   ],
   templateUrl: './avatar.component.html',
-  styleUrl: './avatar.component.css'
+  styleUrl: './avatar.component.scss'
 })
 export class AvatarComponent {
   @Input() size: number = 50;

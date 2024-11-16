@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import {GroupComponent} from './group/group.component';
-import {GreetingComponent} from './greeting/greeting.component';
+import { GroupComponent } from './group/group.component';
+import { GreetingComponent } from './greeting/greeting.component';
 
 enum RoutePaths {
   HOME = "",

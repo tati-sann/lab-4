@@ -4,8 +4,8 @@
   align-items: center;
   border-radius: 50%;
   overflow: hidden;
-}
 
-.avatar__img {
-  object-fit: cover;
+  &__img {
+    object-fit: cover;
+  }
 }

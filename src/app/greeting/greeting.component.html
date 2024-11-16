@@ -1,11 +1,22 @@
 <div class="greeting-page">
-  <form class="greeting-page__form" [formGroup]="greetingForm" (ngSubmit)="displayGreeting()">
+  <form
+    class="greeting-page__form"
+    [formGroup]="greetingForm"
+    (ngSubmit)="displayGreeting()"
+  >
     <label class="text-input">
       <span class="text-input__label">Введите ваше имя:</span>
-      <input class="text-input__input" type="text" formControlName="username" />
+      <input
+        class="text-input__input"
+        type="text"
+        formControlName="username" />
     </label>
 
-    <app-button type="submit">Приветствовать!</app-button>
+    <app-button
+      type="submit"
+    >
+      Приветствовать!
+    </app-button>
   </form>
 
   <div class="greeting-page__message">
